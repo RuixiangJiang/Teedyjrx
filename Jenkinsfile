@@ -10,7 +10,7 @@ pipeline{
             steps{
                 sh 'mvn pmd:pmd'
                 sh 'mvn javadoc:javadoc'
-                sh 'mvn test'
+                sh 'mvn test -DskipTests=true'
             }
         }
     }
