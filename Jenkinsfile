@@ -6,9 +6,11 @@ pipeline{
                 sh 'mvn -B -DskipTests clean package'
             }
         }
-        stage('pmd'){
+        stage('test'){
             steps{
                 sh 'mvn pmd:pmd'
+                sh 'mvn javadoc:javadoc'
+                sh 'mvn test'
             }
         }
     }
