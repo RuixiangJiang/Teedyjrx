@@ -9,7 +9,7 @@ pipeline{
         stage('test'){
             steps{
                 sh 'mvn pmd:pmd'
-                sh 'mvn javadoc:javadoc'
+                sh 'mvn javadoc:jar'
                 sh 'mvn test --fail-never'
             }
         }
