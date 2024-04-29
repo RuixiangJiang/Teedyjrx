@@ -10,7 +10,7 @@ pipeline{
             steps{
                 sh 'mvn pmd:pmd'
                 sh 'mvn test --fail-never'
-                sh 'mvn javadoc:jar'
+                sh 'mvn javadoc:jar --fail-never'
             }
         }
     }
